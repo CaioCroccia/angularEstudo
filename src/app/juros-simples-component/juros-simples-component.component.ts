@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./juros-simples-component.component.css']
 })
 export class JurosSimplesComponentComponent implements OnInit {
+  valor: number;
+  periodo: number;
+  
 
   constructor() { }
 

@@ -5,16 +5,30 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" href="#">Home</a>
-      <a class="nav-link" href="#" [(ngModel)]="var" [value]="1">Juros Simples</a>
-      <a class="nav-link" href="#" [(ngModel)]="var" [value]="2" >Juros Component</a>
-
-    </div>
-  </div>
+ 
 </div>
 </nav>
-<div>
-  {{var}}
+<div class="container text-center">
+<div class="row row-cols-4">
+  <div class="col">
+    <input class="form-check-input" type="radio" name="exampleRadios"  [value]="1" [(ngModel)]="option"/>
+      <label class="form-check-label" for="exampleRadios1">
+        Juros Simples
+      </label>
+  </div>
+<div class="col">
+<input class="form-check-input" type="radio" name="exampleRadios"  [value]="2" [(ngModel)]="option"/>
+    <label  for="exampleRadios1">
+      Juros Compostos
+    </label>
+  </div>
 </div>
+<div>
+  {{ option }}
+</div>
+
+<app-juros-composto-component *ngIf="option =='2'"></app-juros-composto-component>
+
+
+
+<app-juros-simples-component *ngIf="option =='1'"></app-juros-simples-component>
