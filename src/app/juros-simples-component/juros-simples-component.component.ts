@@ -24,7 +24,7 @@ export class JurosSimplesComponentComponent implements OnInit {
   }
 
   getJuros(){
-    this.juros = this.valor * ( 1 + this.taxa * (this.periodo))
+    return this.juros = this.valor * ( 1 + this.taxa * (this.periodo))
   }
 
 }
