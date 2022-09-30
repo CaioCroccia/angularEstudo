@@ -8,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class JurosSimplesComponentComponent implements OnInit {
   valor: number;
   periodo: number;
-  
+  taxa: number;
+  juros: number;
 
-  constructor() { }
+
+  constructor() { 
+    this.valor = 0;
+    this.periodo = 0;
+    this.taxa = 0.01;
+
+
+  }
 
   ngOnInit() {
+  }
+
+  getJuros(){
+    this.juros = this.valor * ( 1 + this.taxa * (this.periodo))
   }
 
 }
