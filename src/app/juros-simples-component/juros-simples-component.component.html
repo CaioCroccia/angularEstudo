@@ -1,2 +1,10 @@
 <h1>Insira o valor dos juros</h1>
-<input></input>
+
+<p>Insira o periodo:</p>
+<input type="number" step="1" [(ngModel)]="periodo"/>
+
+<p>Insira o capital inicial:</p>
+<input type="number" step="1" [(ngModel)]="valor"/>
+
+
+<div>{{getJuros()}}</div>
